@@ -35,3 +35,31 @@ a {
     height: 20px;
     background: #2196f3;
 }
+
+.artists_list {
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+.artists_list .artist_item {
+    display: block;
+    height: 290px;
+    background-size: cover !important;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.artists_list h4 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.artists_list .artist_item div {
+    background: #2196f3;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}

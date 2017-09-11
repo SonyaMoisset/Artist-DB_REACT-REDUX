@@ -23,7 +23,7 @@ const ArtistsList = (props) => {
     }
 
     return (
-        <div className="artists_lists">
+        <div className="artists_list">
             <h4>Browse the artists</h4>
             {list(props)}
         </div>
