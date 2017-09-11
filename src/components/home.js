@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Banner from './banner'
 import ArtistsList from './artists_list'
 
-const URL_ARTISTS = 'http://localhost:3004/artists'
+const URL_ARTISTS = `http://localhost:3004/artists`
 
 class Home extends Component {
     constructor(props) {
