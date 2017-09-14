@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AlbumList = (props) => {
+const AlbumList = props => {
 
     const showList = ({ albumList }) => {
         if (albumList) {

@@ -14,19 +14,13 @@ class Home extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch(URL_ARTISTS, {
-            method: 'GET'
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                artists: json
-            })
-        })
+    componentDidMount = () => {
+        fetch(URL_ARTISTS, { method: 'GET' })
+        .then(artists => artists.json())
+        .then(artists => { this.setState({ artists }) })
     }
 
-    render() {
+    render = () => {
         return (
             <div>
                 <Banner />

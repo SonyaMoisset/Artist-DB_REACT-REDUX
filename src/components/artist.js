@@ -14,22 +14,14 @@ class Artist extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch(`${REQ_URL}/${this.props.match.params.artistid}`, {
-            method: 'GET'
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                artist: json
-            })
-        })
+    componentDidMount = () => {
+        fetch(`${REQ_URL}/${this.props.match.params.artistid}`, { method: 'GET' })
+        .then(artist => artist.json())
+        .then(artist => { this.setState({ artist }) })
     }
 
-    render() {
-        const style = {
-            background: `url('/images/covers/${this.state.artist.cover}.jpg') no-repeat`
-        }
+    render = () =>  {
+        const style = { background: `url('/images/covers/${this.state.artist.cover}.jpg') no-repeat` }
 
         return (
             <div>
