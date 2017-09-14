@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: "Roboto";
+    background: #eaeaea;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

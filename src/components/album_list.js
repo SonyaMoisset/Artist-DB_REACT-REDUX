@@ -8,7 +8,8 @@ const AlbumList = (props) => {
                 return (
                     <img
                         key={index}
-                        src={`/images/albums/${item.cover}.jpg`}/>
+                        src={`/images/albums/${item.cover}.jpg`}
+                        alt="album cover"/>
                 )
             })
         }
