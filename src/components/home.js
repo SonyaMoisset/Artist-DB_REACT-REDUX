@@ -19,14 +19,12 @@ class Home extends Component {
         .then(artists => { this.setState({ artists }) })
     }
 
-    render = () => {
-        return (
-            <div>
-                <Banner />
-                <ArtistsList allArtists={this.state.artists} />
-            </div>
-        )
-    }
+    render = () => (
+        <div>
+            <Banner />
+            <ArtistsList allArtists={this.state.artists} />
+        </div>
+    )
 }
 
 export default Home

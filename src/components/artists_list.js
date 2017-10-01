@@ -19,13 +19,11 @@ const list = ({ allArtists }) => {
     }
 }
 
-const ArtistsList = (props) => {
-    return (
-        <div className="artists_list">
-            <h4>Browse the artists</h4>
-            {list(props)}
-        </div>
-    )
-}
+const ArtistsList = props => (
+    <div className="artists_list">
+        <h4>Browse the artists</h4>
+        {list(props)}
+    </div>
+)
 
 export default ArtistsList
