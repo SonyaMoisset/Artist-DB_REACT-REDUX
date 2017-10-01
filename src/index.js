@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import { Artist, Home } from './components'
+import { Artist, Home } from './containers'
 
 const App = () => {
     return (

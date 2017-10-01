@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { AlbumList, Header } from './'
+import { AlbumList, Header } from '../components'
 
 const REQ_URL = `http://localhost:3004/artists`
 
