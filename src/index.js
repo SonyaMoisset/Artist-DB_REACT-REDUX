@@ -1,21 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import promiseMiddleware from 'redux-promise'
+import App from './components/App'
 
-import { Artist, Home } from './containers'
+import reducers from './reducers'
 
-const App = () => {
-    return (
-        <BrowserRouter>
-            <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/artist/:artistid" component={Artist} />
-            </div>    
-        </BrowserRouter>
-    )
-}
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 
 ReactDOM.render(
-    <App />,
+    <Provider store={createStoreWithMiddleware(reducers)}>
+        <App />
+    </Provider>,
     document.getElementById('root')
 )

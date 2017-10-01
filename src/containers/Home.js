@@ -1,30 +1,35 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { allArtists } from '../actions/artists_actions'
+import { bindActionCreators } from 'redux'
 
 import { ArtistsList, Banner } from '../components'
 
-const URL_ARTISTS = `http://localhost:3004/artists`
-
 class Home extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            artists: ''
-        }
+    componentDidMount() {
+        this.props.allArtists()
+        console.log('didmount', this.props.allArtists())
     }
 
-    componentDidMount = () => {
-        fetch(URL_ARTISTS, { method: 'GET' })
-        .then(artists => artists.json())
-        .then(artists => { this.setState({ artists }) })
-    }
-
-    render = () => (
-        <div>
-            <Banner />
-            <ArtistsList allArtists={this.state.artists} />
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                <Banner />
+                <ArtistsList allArtists={this.props.artists} />
+            </div>
+        )   
+    }        
 }
 
-export default Home
+function mapStateToProps(state) {
+    console.log('mapstate', state)
+    return {
+        artists: state.artists
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ allArtists }, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
