@@ -10,7 +10,6 @@ class Home extends Component {
 
     componentDidMount() {
         this.props.allArtists()
-        console.log('didmount', this.props.allArtists())
     }
 
     render() {
@@ -24,7 +23,6 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log('mapstate', state)
     return {
         artists: state.artists
     }

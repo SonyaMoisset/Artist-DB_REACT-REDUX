@@ -1,6 +1,6 @@
-import AlbumList from './album_list'
-import Banner from './banner'
-import Header from './header'
+import AlbumList from './AlbumList'
+import Banner from './Banner'
+import Header from './Header'
 
 export {
     AlbumList,

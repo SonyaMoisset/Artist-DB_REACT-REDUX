@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 class ArtistsList extends Component {
     showList = ({ artists }) => {
-        console.log('artists', artists)
         if (artists) {
             return artists.map(artist => {
                 const style = { background: `url('/images/covers/${artist.cover}.jpg') no-repeat` }
