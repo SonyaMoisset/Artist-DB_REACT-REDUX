@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { allArtists } from '../actions/artists_actions'
 import { bindActionCreators } from 'redux'
 
-import { ArtistsList, Banner } from '../components'
+import { Banner } from '../components'
+import { ArtistsList } from '../containers'
 
 class Home extends Component {
 
