@@ -1,14 +1,14 @@
 import {
-    GET_ALL_ARTISTS
+    GET_ARTIST_PROFILE
 } from '../actions/types'
 
 export default function (state = {}, action) {
     switch (action.type) {
-        case GET_ALL_ARTISTS:
+        case GET_ARTIST_PROFILE:
             return {
                 ...state,
-                artists: action.payload
-            }  
+                artist: action.payload
+            }
         default:
             return state
     }

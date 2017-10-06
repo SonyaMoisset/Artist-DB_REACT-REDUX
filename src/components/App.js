@@ -9,7 +9,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Route exact path="/" component={Home} />
-                    <Route path="/artist/:artistid" component={Artist} />
+                    <Route path="/artist/:id" component={Artist} artistProfile={this.props.artist} />
                 </div>
             </BrowserRouter>
         )

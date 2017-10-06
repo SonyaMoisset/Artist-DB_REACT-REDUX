@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 class ArtistsList extends Component {
+
     showList = ({ artists }) => {
         if (artists) {
             return artists.map(artist => {
@@ -21,14 +22,12 @@ class ArtistsList extends Component {
         }
     }
 
-    render() {
-        return (
-            <div className="artists_list">
-                <h4>Browse the artists</h4>
-                {this.showList(this.props.artists)}
-            </div>
-        )
-    }
+    render = () => (
+        <div className="artists_list">
+            <h4>Browse the artists</h4>
+            {this.showList(this.props.artists)}
+        </div>
+    )
 }
 
 function mapStateToProps(state) {

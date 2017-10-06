@@ -1,46 +1,58 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { artistProfile } from '../actions/artist_actions'
+import { bindActionCreators } from 'redux'
 
-import { AlbumList, Header } from '../components'
-
-const REQ_URL = `http://localhost:3004/artists`
+import { AlbumList } from '../containers'
+import { Header } from '../components'
 
 class Artist extends Component {
-    constructor(props) {
-        super(props)
+    
+    componentDidMount() {
+        this.props.artistProfile(this.props.match.params.id)
+    }
 
-        this.state = {
-            artist: ''
+    showArtist = ({ artist }) => {
+        if (artist) {
+            return artist.map(profile => {
+                return (
+                    <div key={profile.id}>
+                        <Header />
+                        <div className="artist_bio">
+                            <div className="avatar">
+                                <span style={{ background: `url('/images/covers/${profile.cover}.jpg') no-repeat` }}></span>
+                            </div>
+                            <div className="bio">
+                                <h3>{profile.name}</h3>
+                                <div className="bio_text">
+                                    {profile.bio}
+                                </div>
+                            </div>
+                            <AlbumList albumList={profile.albums} />
+                        </div>
+                    </div>
+                )
+            }) 
         }
     }
 
-    componentDidMount = () => {
-        fetch(`${REQ_URL}/${this.props.match.params.artistid}`, { method: 'GET' })
-        .then(artist => artist.json())
-        .then(artist => { this.setState({ artist }) })
-    }
-
-    render = () =>  {
-        const style = { background: `url('/images/covers/${this.state.artist.cover}.jpg') no-repeat` }
-
+    render() {
         return (
             <div>
-                <Header />
-                <div className="artist_bio">
-                    <div className="avatar">
-                        <span style={style}></span>    
-                    </div>    
-                    <div className="bio">
-                        <h3>{this.state.artist.name}</h3>  
-                        <div className="bio_text">
-                            {this.state.artist.bio}    
-                        </div>
-                    </div>
-                    <AlbumList albumList={this.state.artist.albums}/>
-                </div>
+                {this.showArtist(this.props.artist)}
             </div>
         )
     }
-
 }
 
-export default Artist
+function mapStateToProps(state) {
+    return {
+        artist: state.artist
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ artistProfile }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Artist)
