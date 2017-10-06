@@ -14,7 +14,6 @@ class Artist extends Component {
     showArtist = ({ artist }) => {
         if (artist) {
             return artist.map(profile => {
-                console.log('profile', profile.albums)
                 return (
                     <div key={profile.id}>
                         <Header />

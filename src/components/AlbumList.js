@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 
 const showAlbumsList = ({ albumList }) => {
     if (albumList) {
-        return albumList.map((album, index) => {
-            console.log('album', album)
+        return albumList.map(album => {
                 return (
                     <img
-                        key={index}
+                        key={album.albumId}
                         src={`/images/albums/${album.cover}.jpg`}
-                        alt="album cover" />
+                        alt={`${album.cover}`} />
                 )
             })
         }
