@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { artistProfile } from '../actions/artist_actions'
 import { bindActionCreators } from 'redux'
 
-import { AlbumList } from '../containers'
-import { Header } from '../components'
+import { AlbumList, Header } from '../components'
 
 class Artist extends Component {
     
@@ -15,6 +14,7 @@ class Artist extends Component {
     showArtist = ({ artist }) => {
         if (artist) {
             return artist.map(profile => {
+                console.log('profile', profile.albums)
                 return (
                     <div key={profile.id}>
                         <Header />
