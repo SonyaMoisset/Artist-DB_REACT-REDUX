@@ -1,19 +1,23 @@
 # MusicDB
 
-A React web application where artists info are fetched from a json file
+## A React/Redux web application where artists info are fetched from a json file
 
 To see the project
 - Clone/download it
 - Use ```npm install```
 - Use ```json-server --watch db.json --port 3004```
 
-This application includes examples of major features of React including:
+## This application includes examples of major features of React including:
 - ES6 syntax
 - Templating string
 - Destructuring assignment
 - fetch API
 - React Router
 - Component-based architecture
+- CSS Partials/Imports
+- Redux store
+- Redux actions
+- Redux reducers
 
 A user can navigate between multiple artists and see a profile from each artist including albums covers
 ![All](https://github.com/SonyaMoisset/artist_db-react/blob/master/musicdb.png)
