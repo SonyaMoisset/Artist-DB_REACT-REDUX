@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { artistProfile } from '../actions/artist_actions'
-import { bindActionCreators } from 'redux'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { artistProfile } from "../actions/artist_actions";
+import { bindActionCreators } from "redux";
 
-import { AlbumList, Header } from '../components'
+import { AlbumList, Header } from "../components";
 
 class Artist extends Component {
     
@@ -31,7 +31,7 @@ class Artist extends Component {
                         </div>
                     </div>
                 )
-            }) 
+            });
         }
     }
 
