@@ -8,12 +8,12 @@ import { AlbumList, Header } from "../components";
 class Artist extends Component {
     
     componentDidMount() {
-        this.props.artistProfile(this.props.match.params.id)
+        this.props.artistProfile(this.props.match.params.id);
     }
 
     showArtist = ({ artist }) => {
         if (artist) {
-            return artist.map(profile => {
+            return artist.map((profile) => {
                 return (
                     <div key={profile.id}>
                         <Header />
@@ -33,7 +33,7 @@ class Artist extends Component {
                 )
             });
         }
-    }
+    };
 
     render() {
         return (
@@ -47,11 +47,11 @@ class Artist extends Component {
 function mapStateToProps(state) {
     return {
         artist: state.artist
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ artistProfile }, dispatch)
+    return bindActionCreators({ artistProfile }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Artist)
+export default connect(mapStateToProps, mapDispatchToProps)(Artist);
