@@ -1,5 +1,7 @@
 # MusicDB
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/Artist-DB_REACT-REDUX.svg)](https://greenkeeper.io/)
+
 ## A React/Redux web application where artists info are fetched from a json file
 
 To see the project
