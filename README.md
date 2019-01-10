@@ -1,5 +1,8 @@
 # MusicDB
 
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/SonyaMoisset/Artist-DB_REACT-REDUX.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/SonyaMoisset/Artist-DB_REACT-REDUX/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/SonyaMoisset/Artist-DB_REACT-REDUX.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/SonyaMoisset/Artist-DB_REACT-REDUX/context:javascript)
 [![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/Artist-DB_REACT-REDUX.svg)](https://greenkeeper.io/)
 
 ## A React/Redux web application where artists info are fetched from a json file
