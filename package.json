@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "react-redux": "6.0.0",
-    "redux": "4.0.1",
+    "redux": "4.1.0",
     "redux-promise": "0.6.0"
   }
 }
