@@ -7459,21 +7459,20 @@ react-refresh@^0.11.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@7.5.2:
-  version "7.5.2"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.5.2.tgz#fb00e4ac7e1fcc6cb9861458d3ddb2d1b074ca79"
-  integrity sha512-yk1XW8Fj7gK7flpYBXF3yzd2NbX6P7Kxjvs2b5nu1M04rb5pg/Zc4fGdBNTeT4eDYL2bvzWNyKaIMJX/RKHTTg==
+react-router-dom@7.18.3:
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.18.3.tgz#0688c91b4b376c8b0dcaf0a0064975d52a32e0f7"
+  integrity sha512-ytVbyBBM7vMfRCam25r0WMhSVSom909A8p+8m0/f1w853dz/xfFu6etAT2SEbVoSnI+ZoPRDqIsQXVT89gp7kg==
   dependencies:
-    react-router "7.5.2"
+    react-router "7.18.3"
 
-react-router@7.5.2:
-  version "7.5.2"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.5.2.tgz#889137b9ce91dadc06eb40997f57f08199845973"
-  integrity sha512-9Rw8r199klMnlGZ8VAsV/I8WrIF6IyJ90JQUdboupx1cdkgYqwnrYjH+I/nY/7cA1X5zia4mDJqH36npP7sxGQ==
+react-router@7.18.3:
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.18.3.tgz#2a3257aa7c5edd5a71f878063e4c7f3fcfc4b76a"
+  integrity sha512-gyXgtdr5uACJ5b1Q4udzjVV+tb/rlHIMJKuJ0e89R4Kzgz47z/rgP0dIKxktqIEUhDHluGTPJJH/wRha7CyqsA==
   dependencies:
     cookie "^1.0.1"
     set-cookie-parser "^2.6.0"
-    turbo-stream "2.4.0"
 
 react-scripts@5.0.1:
   version "5.0.1"
@@ -8580,11 +8579,6 @@ tsutils@^3.21.0:
   integrity sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==
   dependencies:
     tslib "^1.8.1"
-
-turbo-stream@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/turbo-stream/-/turbo-stream-2.4.0.tgz#1e4fca6725e90fa14ac4adb782f2d3759a5695f0"
-  integrity sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
